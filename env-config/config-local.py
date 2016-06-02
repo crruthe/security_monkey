@@ -23,7 +23,7 @@ SQLALCHEMY_POOL_SIZE = 50
 SQLALCHEMY_MAX_OVERFLOW = 15
 ENVIRONMENT = 'local'
 USE_ROUTE53 = False
-FQDN = '127.0.0.1'
+FQDN = 'localhost'
 API_PORT = '5000'
 WEB_PORT = '5000'
 WEB_PATH = '/static/ui.html'
@@ -70,7 +70,7 @@ SECURITYGROUP_INSTANCE_DETAIL = 'FULL'
 ACTIVE_PROVIDERS = []  # "ping" or "google"
 
 PING_NAME = ''  # Use to override the Ping name in the UI.
-PING_REDIRECT_URI = "{BASE}/api/1/auth/ping".format(BASE=BASE_URL)
+PING_REDIRECT_URI = "http://{FQDN}:{PORT}/api/1/auth/ping".format(FQDN=FQDN, PORT=WEB_PORT)
 PING_CLIENT_ID = ''  # Provided by your administrator
 PING_AUTH_ENDPOINT = ''  # Often something ending in authorization.oauth2
 PING_ACCESS_TOKEN_URL = ''  # Often something ending in token.oauth2
