@@ -25,26 +25,13 @@ mod = Blueprint('sso', __name__)
 api = Api(mod)
 
 
-# def prevent_open_redirect(return_to):
-#     from urlparse import urlparse
-#     return_to = urlparse(return_to)
-#     return '{path}?{query}#{fragment}'.format(
-#         path=return_to.path,
-#         query=return_to.query,
-#         fragment=return_to.fragment
-#     )
-
 from flask_security.utils import validate_redirect_url
 
 
 class Ping(Resource):
     """
-    This class serves as an example of how one might implement an SSO provider for use with Grouper. In
-    this example we use a OpenIDConnect authentication flow, that is essentially OAuth2 underneath. If you have an
-    OAuth2 provider you want to use Grouper there would be two steps:
-    1. Define your own class that inherits from :class:`flask.ext.restful.Resource` and create the HTTP methods the \
-    provider uses for it's callbacks.
-    2. Add or change the Grouper AngularJS Configuration to point to your new provider
+    This class serves as an example of how one might implement an SSO provider for use with Security Monkey. In
+    this example we use a OpenIDConnect authentication flow, that is essentially OAuth2 underneath.
     """
     decorators = [rbac.allow(["anonymous"], ["GET", "POST"])]
     def __init__(self):
