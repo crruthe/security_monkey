@@ -102,7 +102,7 @@ WTF_CSRF_METHODS = ['DELETE', 'POST', 'PUT', 'PATCH']
 SECURITYGROUP_INSTANCE_DETAIL = 'FULL'
 
 # SSO SETTINGS:
-ACTIVE_PROVIDERS = []  # "ping" or "google"
+ACTIVE_PROVIDERS = []  # "ping", "google" or "onelogin"
 
 PING_NAME = ''  # Use to override the Ping name in the UI.
 PING_REDIRECT_URI = "http://{FQDN}:{PORT}/api/1/auth/ping".format(FQDN=FQDN, PORT=WEB_PORT)

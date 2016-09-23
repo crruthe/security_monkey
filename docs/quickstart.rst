@@ -453,7 +453,7 @@ Edit /usr/local/src/security_monkey/env-config/config-deploy.py:
     MAX_THREADS = 30
 
     # SSO SETTINGS:
-    ACTIVE_PROVIDERS = []  # "ping" or "google"
+    ACTIVE_PROVIDERS = []  # "ping", "google" or "onelogin"
 
     PING_NAME = ''  # Use to override the Ping name in the UI.
     PING_REDIRECT_URI = "{BASE}api/1/auth/ping".format(BASE=BASE_URL)
