@@ -56,6 +56,6 @@ setup(
         'healthcheck>=1.2.0',
         'moto>=0.4.25',
         'freezegun>=0.3.7',
-        'python-saml==2.1.9'
+        'python-saml>=2.2.0'
     ]
 )
